@@ -1,0 +1,46 @@
+# Keil MDK 编译输出
+*.uvgui*
+Objects/
+Listings/
+Debug/
+build/
+*.elf
+*.hex
+*.bin
+*.crf
+*.d
+*.o
+*.axf
+*.map
+*.htm
+*.dep
+*.lnp
+*.iex
+*.sct
+*.scvd
+*.uvguix.*
+*.uvoptx
+JLinkLog.txt
+*.SCT
+
+# IAR EWARM 编译输出
+EWARM/settings/
+EWARM/Debug/
+EWARM/Release/
+*.ewd
+*.ewp
+*.eww
+*.bat
+
+# CubeMX 生成临时文件
+*.ioc.backup
+.mxproject
+
+# IDE 配置
+.idea/
+.vscode/
+
+# 系统文件
+Thumbs.db
+Desktop.ini
+*.log
