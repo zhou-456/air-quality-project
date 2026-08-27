@@ -2,7 +2,7 @@
 > 🎓 本科毕业设计 | FreeRTOS多任务环境监测设备 | 本地LCD显示 + OneNET云平台远程监测
 
 ## 项目概述
-本系统以STM32F103C8T6为主控芯片，基于FreeRTOS实时操作系统实现多任务并发运行。系统采集温度、湿度、PM2.5、eCO₂、TVOC、硫化氢(H₂S)、氨气(NH₃)多项环境指标。
+本系统以STM32F103RCT6为主控芯片，基于FreeRTOS实时操作系统实现多任务并发运行。系统采集温度、湿度、PM2.5、eCO₂、TVOC、硫化氢(H₂S)、氨气(NH₃)多项环境指标。
 设备支持本地彩色LCD可视化交互，可自定义报警阈值，阈值保存在DS1302的片内RAM实现掉电保存；环境数值超标时触发蜂鸣器与LED声光报警。ESP8266‑01S WiFi模块通过MQTT协议定时上传JSON格式传感器数据到中国移动OneNET物联网云平台，电脑、手机可在线远程查看环境状态。
 
 项目全部驱动自主编写，使用互斥锁解决多任务共享数据访问冲突，任务之间解耦，便于功能二次修改与拓展。
@@ -10,7 +10,7 @@
 ## 硬件列表
 |器件|功能说明|
 |:---|:---|
-|STM32F103C8T6|主控MCU，运行FreeRTOS|
+|STM32F103RCT6|主控MCU，运行FreeRTOS|
 |SHT30|I2C温湿度传感器，带CRC数据校验|
 |SGP30|I2C，检测eCO₂、TVOC空气质量|
 |GP2Y1014AU0F|ADC采集PM2.5粉尘浓度|
@@ -104,7 +104,7 @@ CubeMX自动生成
 
 🛠编译环境
 IDE：Keil‑MDK‑ARM5 / STM32CubeIDE
-主控芯片：STM32F103C8T6
+主控芯片：STM32F103RCT6
 RTOS：FreeRTOS CMSIS‑RTOS V1
 配置工具：STM32CubeMX
 ⚠️重要注意事项
